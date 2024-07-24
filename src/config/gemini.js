@@ -8,6 +8,7 @@
  * See the getting started guide for more information
  * https://ai.google.dev/gemini-api/docs/get-started/node
  */
+// require('dotenv').config();
 
 import {
     GoogleGenerativeAI,
@@ -15,7 +16,7 @@ import {
     HarmBlockThreshold,
   }  from "@google/generative-ai";
   
-  const apiKey = "AIzaSyBGOxH8XCc_9ByrbAATe_-Ubtxg3-734-I";
+  const apiKey = import.meta.env.VITE_API_KEY;;
   const genAI = new GoogleGenerativeAI(apiKey);
   
   const model = genAI.getGenerativeModel({
